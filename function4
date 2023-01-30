@@ -1,0 +1,12 @@
+exports.handler = (event, context, callback) => {
+    const request = event.Records[0].cf.request;
+    const path = request.uri;
+
+    if (path === '/' || path.endsWith('.html') || path.endsWith('.js') || path.endsWith('.css')) {
+        callback(null, request);
+        return;
+    }
+
+    request.uri = '/index.html';
+    callback(null, request);
+};
