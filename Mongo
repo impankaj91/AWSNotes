@@ -1,0 +1,3 @@
+<appSettings>
+  <add key="MongoDbConnectionString" value="mongodb://username:password@server_name:port/dbname?authSource=admin&ssl=true&sslVerifyCertificate=true"/>
+</appSettings>
